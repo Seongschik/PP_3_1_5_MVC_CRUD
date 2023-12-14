@@ -50,25 +50,25 @@ public class UserService implements UserDetailsService {
         User adminUser = new User();
         adminUser.setId(1L);
         adminUser.setFirstName("ADMIN");
-        adminUser.setLastName("Don't Touch it please");
-        adminUser.setSalary(-555);
-        adminUser.setDepartment("SECURITY");
+        adminUser.setLastName("admin");
+        adminUser.setSalary(1000);
+        adminUser.setDepartment("IT");
         adminUser.setUsername("admin");
         adminUser.setPassword(passwordEncoder.encode("admin"));
         adminUser.setRoles(Collections.singleton(adminRole));
 
-        User baka = new User();
-        baka.setId(2L);
-        baka.setFirstName("USER");
-        baka.setLastName("Test_name");
-        baka.setSalary(0);
-        baka.setDepartment("TEST_DEPARTMENT");
-        baka.setUsername("baka");
-        baka.setPassword(passwordEncoder.encode("user"));
-        baka.setRoles(Collections.singleton(userRole));
+        User userUser = new User();
+        userUser.setId(2L);
+        userUser.setFirstName("USER");
+        userUser.setLastName("user");
+        userUser.setSalary(0);
+        userUser.setDepartment("factory");
+        userUser.setUsername("user");
+        userUser.setPassword(passwordEncoder.encode("user"));
+        userUser.setRoles(Collections.singleton(userRole));
 
         userRepository.save(adminUser);
-        userRepository.save(baka);
+        userRepository.save(userUser);
 
     }
 
